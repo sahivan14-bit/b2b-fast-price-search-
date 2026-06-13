@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📦 Профессиональный B2B Поиск по Прайсу</title>
+    <!-- Подключаем стили из отдельного файла -->
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cloudflare.com"></script>
+</head>
+<body>
+
+<div class="container">
+    <h1>📦 Умный B2B поиск по прайс-листу</h1>
+    <div class="status-badge">● Прямая связь JS-Data: Цены точны на 100%</div>
+    <p>База данных синхронизирована напрямую. Введите название детали, категорию или артикул для мгновенной фильтрации.</p>
+
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Например: Калина задний, адсорбер, 01539..." onkeypress="handleKeyPress(event)">
+        <button onclick="performSearch()">🔥 НАЙТИ ТОВАР</button>
+    </div>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Наименование</th>
+                    <th>Код товара</th>
+                    <th>Производство</th>
+                    <th>Артикул</th>
+                    <th>Цена (руб)</th>
+                </tr>
+            </thead>
+            <tbody id="resultsTableBody">
+                <!-- Сюда JS будет подставлять строки результатов -->
+            </tbody>
+        </table>
+        <div id="noResultsMessage" class="no-results" style="display: none;">Ничего не найдено. Попробуйте изменить запрос.</div>
+    </div>
+</div>
+
+<!-- Подключаем скрипты из отдельного файла в самом конце body -->
+<script src="app.js"></script>
+</body>
+</html>
